@@ -5,13 +5,13 @@
 Summary:	Library to implement Unicode algorithms for line and word breaking
 Summary(pl.UTF-8):	Biblioteka z implmentacją algorytmów Unicode do łamania wierszy i słów
 Name:		libunibreak
-Version:	5.1
+Version:	6.1
 Release:	1
 License:	Zlib
 Group:		Libraries
 #Source0Download: https://github.com/adah1972/libunibreak/releases
-Source0:	https://github.com/adah1972/libunibreak/releases/download/libunibreak_5_1/%{name}-%{version}.tar.gz
-# Source0-md5:	dacabd7f6a7c00481b6bc39a9367c332
+Source0:	https://github.com/adah1972/libunibreak/releases/download/libunibreak_6_1/%{name}-%{version}.tar.gz
+# Source0-md5:	8df410d010e03de1a339a400a920335e
 URL:		https://github.com/adah1972/libunibreak
 BuildRequires:	rpm-build >= 4.6
 Obsoletes:	liblinebreak < 2.2
@@ -94,12 +94,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS LICENCE NEWS README.md
 %attr(755,root,root) %{_libdir}/libunibreak.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libunibreak.so.5
+%attr(755,root,root) %ghost %{_libdir}/libunibreak.so.6
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/liblinebreak.so
 %attr(755,root,root) %{_libdir}/libunibreak.so
+%{_includedir}/eastasianwidthdef.h
 %{_includedir}/graphemebreak.h
 %{_includedir}/linebreak.h
 %{_includedir}/linebreakdef.h
